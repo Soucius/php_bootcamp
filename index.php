@@ -8,15 +8,22 @@
 <body>
     <?php
         $books = [
-            "Do Androids Dream of Electric Sheep",
-            "The Langoliers",
-            "Project Hail Mary"
+            [
+                "name" => "Do Androids Dream of Electric Sheep",
+                "author" => "Philip K. Dick",
+                "purchaseUrl" => "https://google.com"
+            ],
+            [
+                "name" => "Project Hail Mary",
+                "author" => "Andy Weir",
+                "purchaseUrl" => "https://google.com"
+            ]
         ];
     ?>
 
     <ul>
         <?php foreach ($books as $book) : ?>
-            <li><?= $book; ?></li>
+            <li><a href=<?= $book['purchaseUrl'] ?> target="_blank"><?= $book["name"]; ?></a></li>
         <?php endforeach; ?>
     </ul>
 </body>
