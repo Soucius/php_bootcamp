@@ -1,10 +1,14 @@
 <?php
 
-    return [
-        '/' => 'controllers/index.php',
-        '/about' => 'controllers/about.php',
-        '/notes' => 'controllers/notes.php',
-        '/note' => 'controllers/note.php',
-        '/notes/create' => 'controllers/note-create.php',
-        '/contact' => 'controllers/contact.php'
-    ];
+    // return [
+    //     '/' => 'controllers/index.php',
+    //     '/about' => 'controllers/about.php',
+    //     '/notes' => 'controllers/notes/index.php',
+    //     '/note' => 'controllers/notes/show.php',
+    //     '/note/delete' => '',
+    //     '/notes/create' => 'controllers/notes/create.php',
+    //     '/contact' => 'controllers/contact.php'
+    // ];
+
+    $router->get("/","controllers/index.php");
+    $router->delete("/note","controllers/notes/destroy.php");
